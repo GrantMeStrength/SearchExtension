@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Get Started Extension Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+  
+   <script src="popup.js"></script>
+  </head>
+  <body bgcolor="#E6E6FA">
+    <h5>
+    UWP Dev Search:
+    </h5>
+    <form name="search">
+    <input type="text" name="Search" value="search terms" id="string" style="width: 140px;">
+    </br></br>
+    <input type="submit" value="API" style="width: 150px;" id="click_API"></br>
+     <input type="submit" value="Docs" style="width: 150px;" id="click_Docs"></br>
+     <input type="submit" value="Samples" style="width: 150px;" id="click_Samples"></br>
+     <input type="submit" value="Stack Overflow" style="width: 150px;" id="click_StackOverflow"></br>
+     <input type="submit" value="Channel9" style="width: 150px;" id="click_Channel9"></br>
+    <input type="submit" value="Bing" style="width: 150px;" id="click_Bing"></br>
+    <input type="submit" value="Google" style="width: 150px;" id="click_Google"></br></br>
+<hr>
+
+    </form>
+    <div id="feedback">
+       <h5><input type="submit" value="Email Feedback" id="click_Feedback" style="width: 150px; background-color: lightgrey"></h5>
+    </div>
+    <div id="feedback2">
+    </div>
+    <h5>
+
+      <form action="mailto:windevcx@microsoft.com?subject=Feedback" method="post" id="feedbackForm" enctype="text/plain">
+      <label>I was looking for:</label>
+      <textarea name="search" id="search"></textarea></br>
+      <label>Instead I found:</label>
+      <textarea name="result"></textarea></br>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+      </form>
+
+
+    </h5>
+  </body>
+</html>
+
